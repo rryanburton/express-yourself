@@ -16,4 +16,4 @@ def phone_number(input):
 
     '''
 
-    return re.match(r'^\(?\d{3}\)?[. -]?\d{3}[-.]?\d{4}$', input)
+    return re.match(r'{^\(?\d{3}\)?[. -]?\d{3}[-.]?\d{4}$}', input)
