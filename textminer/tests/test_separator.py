@@ -4,6 +4,7 @@ params = pytest.mark.parametrize
 
 import textminer.separator as s
 
+
 @xfail
 @params("input,expected", [
     ("hello", ['hello']),
@@ -86,7 +87,7 @@ def test_date(input, expected):
     assert s.date(input) == expected
 
 
-## HARD MODE BEGINS
+# HARD MODE BEGINS
 
 @xfail
 @params("input,expected", [
