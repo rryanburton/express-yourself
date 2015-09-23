@@ -14,18 +14,18 @@ def word(string):
 
 
 def words(string):
-    return re.match(r'[\w]*[a-z-]+$', string)
-
+    #return re.match(r'[\w]*[a-z-]+$', string)
+    return re.split(r'\s+', string)
 def phone_number(string):
-    # return re.match(r'[\(\d{3}\)\s\d{3}\-\d{4}]', string)
+    return re.match(r'[\(\d{3}\)\s\d{3}\-\d{4}]', string)
 
 def money():
     pass
 
 
-def zipcode():
-    pass
+def zipcode(num):
+    return re.match(r'[\d{5}\-*\d{4}]', num)
 
 
-def date():
-    pass
+def date(num):
+    return re.match(r'(\d+[/-]\d+[/-]\d+)', num)

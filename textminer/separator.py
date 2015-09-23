@@ -1,6 +1,7 @@
 import re
 
-def words():
+def words(string, count):
+    return re.split(r'\s+', string)
     '''
     takes a single or multi word string and
     splits it into a list of single words:
@@ -15,4 +16,4 @@ def phone_number(input):
 
     '''
 
-    pass
+    return re.match(r'^\(?\d{3}\)?[. -]?\d{3}[-.]?\d{4}$', input)
